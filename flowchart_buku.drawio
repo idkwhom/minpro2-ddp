@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.3">
+  <diagram name="Flowchart Program Buku" id="flow1">
+    <mxGraphModel dx="1426" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mulai" value="Mulai" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="50" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="login" value="Input Username &amp; Password" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="455" y="160" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cekLogin" value="Valid?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="470" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gagal" value="Login Gagal &amp; Keluar" style="rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="250" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" value="Tampilkan Menu Sesuai Role" style="rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="630" y="250" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pilih" value="Pilih Menu" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="360" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lihat" value="Lihat Buku" style="rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tambah" value="Tambah Buku (Manager)" style="rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="480" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="update" value="Update Buku" style="rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="810" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hapus" value="Hapus Buku (Manager)" style="rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="960" y="480" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="keluar" value="Program Selesai" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="580" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" source="mulai" target="login" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" source="login" target="cekLogin" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" source="cekLogin" target="gagal" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" parent="1" source="cekLogin" target="menu" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" parent="1" source="menu" target="pilih" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" parent="1" source="pilih" target="lihat" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" parent="1" source="pilih" target="tambah" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" parent="1" source="pilih" target="update" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" parent="1" source="pilih" target="hapus" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" parent="1" source="pilih" target="keluar" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
