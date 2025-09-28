@@ -1,0 +1,93 @@
+from prettytable import PrettyTable
+import getpass
+
+# Akun (username, password, role)
+users = [
+    ("manager", "123", "Manager"),
+    ("karyawan", "456", "Karyawan")
+]
+
+# Data buku
+buku = {
+    "Laskar Pelangi": 5,
+    "Bumi Manusia": 3,
+    "Negeri 5 Menara": 7,
+    "Perahu Kertas": 4
+}
+
+# ---------------- FUNGSI ----------------
+def login():
+    print("=== Login ===")
+    u = input("Username: ")
+    p = getpass.getpass("Password: ")
+    for nama, sandi, role in users:
+        if u == nama and p == sandi:
+            print(f"Selamat datang, {role}!")
+            return role
+    print("Login gagal.")
+    return None
+
+def lihat():
+    table = PrettyTable(["Judul", "Stok"])
+    for judul, stok in buku.items():
+        table.add_row([judul, stok])
+    print(table)
+
+def tambah():
+    judul = input("Judul buku baru: ")
+    if judul in buku:
+        print("Buku sudah ada.")
+    else:
+        try:
+            stok = int(input("Stok awal: "))
+            buku[judul] = stok
+            print("Buku ditambahkan.")
+        except:
+            print("Stok harus angka!")
+
+def update():
+    judul = input("Judul buku: ")
+    if judul in buku:
+        try:
+            stok = int(input("Stok baru: "))
+            buku[judul] = stok
+            print("Stok diperbarui.")
+        except:
+            print("Stok harus angka!")
+    else:
+        print("Buku tidak ada.")
+
+def hapus():
+    judul = input("Judul buku: ")
+    if judul in buku:
+        del buku[judul]
+        print("Buku dihapus.")
+    else:
+        print("Buku tidak ada.")
+
+# ---------------- MAIN ----------------
+role = login()
+if role:
+    while True:
+        print("\nMenu:")
+        print("1. Lihat Buku")
+        if role == "Manager":
+            print("2. Tambah Buku")
+            print("3. Update Buku")
+            print("4. Hapus Buku")
+        elif role == "Karyawan":
+            print("2. Update Buku")
+        print("0. Keluar")
+
+        pilih = input("Pilih: ")
+
+        if pilih == "1": lihat()
+        elif pilih == "2" and role == "Manager": tambah()
+        elif pilih == "2" and role == "Karyawan": update()
+        elif pilih == "3" and role == "Manager": update()
+        elif pilih == "4" and role == "Manager": hapus()
+        elif pilih == "0":
+            print("Program selesai.")
+            break
+        else:
+            print("Pilihan tidak ada.")
