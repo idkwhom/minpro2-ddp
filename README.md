@@ -18,5 +18,12 @@ kita disini bisa memilih menghapus buku yang tersedia
 
 <img width="196" height="142" alt="Screenshot 2025-09-28 222524" src="https://github.com/user-attachments/assets/f5922dca-47ed-4932-8d1a-ed5ef4befb58" />
 
+disini kita memilih option ke 5 untuk keluar dari program
 
+<img width="330" height="322" alt="Screenshot 2025-09-28 222734" src="https://github.com/user-attachments/assets/e07624d8-444f-4312-9115-3f39ebd59e0e" />
 
+disini kita login sebgai karyawan toko dan bisa melihat buku buku apaa saja yang tersedia
+
+<img width="345" height="507" alt="Screenshot 2025-09-28 222751" src="https://github.com/user-attachments/assets/866b5128-bdf8-4c56-8f30-6c01ea434e29" />
+
+kita disini bisa mengupdate data buku dan stock yang ada.apa bila kita memilih 0 kita akan keluar dari program  yang telah tersedia
